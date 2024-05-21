@@ -41,10 +41,13 @@ function egowebsite_theme_scripts()
     wp_enqueue_style('style', get_stylesheet_uri());
 
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+    wp_enqueue_style('owl-carousel-css', get_template_directory_uri() . '/owl-carousel/assets/owl.carousel.min.css');
 
     wp_enqueue_script('jquery');
 
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+    wp_enqueue_script('owl-carousel-js', get_template_directory_uri() . '/owl-carousel/owl.carousel.min.js');
+    wp_enqueue_script('index-js', get_template_directory_uri() . '/assets/js/index.js');
 
 }
 add_action('wp_enqueue_scripts', 'egowebsite_theme_scripts');
@@ -107,5 +110,8 @@ add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
 // Include Customizer
 require get_template_directory() . '/inc/customizer.php';
 
-// Include Service Area Section
+// Include Services Area Section
 require get_template_directory() . '/inc/services.php';
+
+// Include Projects Area Section
+require get_template_directory() . '/inc/projects.php';

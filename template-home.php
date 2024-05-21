@@ -25,8 +25,8 @@ get_header();
     <?php
     $args = array(
         'post_type' => 'service',
-        'posts_per_page'=> 3,
-        'order'=> 'ASC',
+        'posts_per_page' => 3,
+        'order' => 'ASC',
     );
     $tech_posts = new WP_QUERY($args);
     if ($tech_posts->have_posts()): ?>
@@ -102,8 +102,17 @@ get_header();
     </div>
 
 </div>
-
-
+<div class="home-carousel row ml-0 mr-0 mt-5">
+    <div class="owl-carousel">
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+    </div>
+</div>
 <?php
 get_footer();
 ?>
