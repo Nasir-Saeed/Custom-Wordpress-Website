@@ -1,4 +1,10 @@
-<a?php /* * This template is used display Home page * Template Name: Home Template */ get_header(); ?>
+<?php
+/*
+* This template is used to display Home page
+* Template Name: Homepage Template
+*/
+get_header();
+?>
     <div class="page-custom-header">
         <?php $banner_status = get_theme_mod('egowebsite_home_banner_block_1', 'yes'); ?>
         <?php if ($banner_status == 'yes'): ?>
