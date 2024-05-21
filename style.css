@@ -168,6 +168,14 @@
     max-height: 300px;
 }
 
+.home-service-col{
+    text-align: center;
+}
+.service-thumb{
+    margin-bottom: 10px ;
+}
+
+
 /*********************
 04: Sidebar & Widgets
 *********************/

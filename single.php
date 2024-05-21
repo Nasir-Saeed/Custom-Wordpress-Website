@@ -25,7 +25,6 @@ get_header();
             </div>
             <div class="post-content">
                 <?php the_content(); ?>
-
             </div>
         <?php endwhile; ?>
     <?php endif; ?>

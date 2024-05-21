@@ -21,7 +21,30 @@ get_header();
         <?php endwhile; ?>
     <?php endif; ?>
 </div>
-
+<div class="home-services row ml-0 mr-0 mt-5">
+    <?php
+    $args = array(
+        'post_type' => 'service',
+        'posts_per_page'=> 3,
+        'order'=> 'ASC',
+    );
+    $tech_posts = new WP_QUERY($args);
+    if ($tech_posts->have_posts()): ?>
+        <?php while ($tech_posts->have_posts()):
+            $tech_posts->the_post(); ?>
+            <div class="home-service-col col-4">
+                <div class="service-thumb col-12">
+                    <?php the_post_thumbnail('medium ', array('class' => 'img-thumbnail')); ?>
+                </div>
+                <div class="service-title col-12">
+                    <h3><a href="<?php echo get_the_permalink(get_the_ID()) ?>"><?php the_title(); ?></a></h3>
+                    <p><?php the_excerpt(); ?></p>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
+</div>
 <div class="home-posts row ml-0 mr-0 mt-5">
     <div class="col">
         <div class="section-head">
@@ -31,6 +54,7 @@ get_header();
             <?php
             $args = array(
                 'cat' => 5,
+                'posts_per_page' => 3,
             );
             $tech_posts = new WP_QUERY($args);
             if ($tech_posts->have_posts()): ?>
@@ -56,6 +80,7 @@ get_header();
             <?php
             $args = array(
                 'cat' => 6,
+                'posts_per_page' => 3,
             );
             $social_posts = new WP_QUERY($args);
             if ($social_posts->have_posts()): ?>
