@@ -37,11 +37,9 @@ add_action('after_setup_theme', 'egowebsite_theme_setup');
 
 function egowebsite_theme_scripts()
 {
-
-    wp_enqueue_style('style', get_stylesheet_uri());
-
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
     wp_enqueue_style('owl-carousel-css', get_template_directory_uri() . '/owl-carousel/assets/owl.carousel.min.css');
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+    wp_enqueue_style('style', get_stylesheet_uri());
 
     wp_enqueue_script('jquery');
 
@@ -115,3 +113,6 @@ require get_template_directory() . '/inc/services.php';
 
 // Include Projects Area Section
 require get_template_directory() . '/inc/projects.php';
+
+// Include Custom Meta Boxes Area Section
+// require get_template_directory() . '/inc/url-metabox.php';
