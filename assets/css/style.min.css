@@ -1,0 +1,38 @@
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Header css */
+
+/* Navbar Css */
+#menu-main-menu {
+    list-style: none;
+    display: flex;
+}
+
+#menu-main-menu li a {
+    padding: 50px !important;
+}
+
+
+/* Widgets Css */
+.wp-block-heading {
+    font-size: 32px;
+}
+
+/* Footer Css */
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-section {
+    background: #151414;
+    position: relative;
+}
+
+
+.footer-widget h3 {
+    color: white;
+}
